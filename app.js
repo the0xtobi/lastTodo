@@ -45,10 +45,23 @@ function deleteCheck(e) {
         todo.classList.toggle("scrape")
     } else if (item.classList.contains("trash-btn")) {
         todo.classList.add("fade")
-        todo.addEventListener("transitionend", ()=>{
+        todo.addEventListener("transitionend", () => {
             todo.remove()
         })
     }
 }
 
-function
+function filterAndSelect(e) {
+    let selectedTodo = todoList.childNodes;
+    selectedTodo.forEach((todo) => {
+        if(e.target.value === "all"){
+            todo.style.display = "flex"
+        } else if(e.target.value === "completed" && todo.classList.contains("scrape")){
+            todo.style.display = "flex"
+        } else if(e.target.value === "uncompleted" && !todo.classList.contains("scrape")){
+            todo.style.display = "flex"
+        } else{
+            todo.style.display = "none"
+        }
+    })
+}
