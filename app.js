@@ -14,6 +14,7 @@ function addTodo(e) {
     e.preventDefault();
     // create the parent todo
     const todo = document.createElement("div")
+    todo.classList.add("todo-item")
     // create todo children
     const listItem = document.createElement("li")
     listItem.classList.add("list-item")

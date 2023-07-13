@@ -61,4 +61,19 @@ input:focus, select:focus, textarea:focus, button:focus{
     border-radius: 3px;
 }
 
+.todolist-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.todo-item{
+    background-color: white;
+}
 
